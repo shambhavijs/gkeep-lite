@@ -63,8 +63,8 @@ class App extends React.Component{
     const notes_list = JSON.parse(list_string);
     this.setState({
       ...this.state,
-      notes_list: notes_list,
-      trash_list: trash_list
+      notes_list: (notes_list? notes_list : []),
+      trash_list: (trash_list? trash_list : [])
     });
   }
 
@@ -126,13 +126,13 @@ class App extends React.Component{
     }
   }
   removeFromNotes(i,id) {
-    let deleted_note = this.state.notes_list.filter(item => {return item.id == id})[0];
+    let deleted_note = this.state.notes_list.filter(item => {return item.id === id})[0];
     const trash_list = this.state.trash_list;
     trash_list.unshift(deleted_note);
     this.setState({
       trash_list: trash_list
     });
-    const notes_list = this.state.notes_list.filter((note,index)=> { return index != i; });
+    const notes_list = this.state.notes_list.filter((note,index)=> { return index !== i; });
     if(this.state.pinned_id){
     this.setState({
       notes_list: notes_list,
@@ -183,7 +183,7 @@ class App extends React.Component{
     });
   }
   removeFromTrash(id) {
-    const trash_list = this.state.trash_list.filter((item) => { return  item.id != id});
+    const trash_list = this.state.trash_list.filter((item) => { return  item.id !== id});
     this.setState({
       ...this.state,
       trash_list: trash_list
@@ -199,8 +199,8 @@ class App extends React.Component{
         display: 'none'
       }
     };
-    
     return(
+     
       <div>
         <div className="header">
           <img src="./logo.png" />

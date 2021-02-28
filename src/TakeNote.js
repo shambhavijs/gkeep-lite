@@ -7,7 +7,7 @@ const TakeNote = ({state, ...actions}) => {
             state.visible === false
             ?
             <div className="take-notes1">
-              <input type="text" placeholder="Take a note..." onClick={actions.handleClick} className="initial" value={state.notes.title}/>
+              <input type="text" placeholder="Take a note..." onClick={actions.handleClick} className="initial" value={state.notes.title} onChange={()=>null}/>
             </div>
             :
             <div className="take-notes2">
