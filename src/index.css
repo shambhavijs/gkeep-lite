@@ -301,7 +301,7 @@ body{
   height: 20px;
   width: 20px;
   justify-self: center;
-  opacity:70%;
+  opacity:0.7;
 }
 .pinned{
   margin-left: 180px;
