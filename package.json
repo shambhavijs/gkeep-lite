@@ -2,22 +2,25 @@
   "name": "to-do-list",
   "version": "0.1.0",
   "private": true,
+  "config-overrides-path": "node_modules/react-app-rewire-disable-chunks",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "react": "^17.0.1",
+    "react-app-rewire-disable-chunks": "0.0.1",
+    "react-app-rewired": "4.0.2",
     "react-dom": "^17.0.1",
     "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2",
+    "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "node ./scripts/build.js",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "rewire": "^5.0.0"
   }
 }
