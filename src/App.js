@@ -211,8 +211,8 @@ class App extends React.Component{
         <div className="content">
           <Router>
             <div className="navigation"> 
-              <Link to="/" className="nav-home"><img className="home" src="./notes.svg"/></Link>
-              <Link to="/trash" className="nav-trash"><img className="trash" src="./delete.svg"/></Link>
+              <Link to="/" className="nav-home"><img className="home" src="./note.png"/></Link>
+              <Link to="/trash" className="nav-trash"><img className="trash" src="./del.png"/></Link>
             </div>
             <Switch>
               <Route exact path="/" render={()=><Home state={this.state} styles={styles} {...this.actions}/>}/>

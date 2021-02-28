@@ -13,7 +13,7 @@ const Trash = ({state, ...actions}) => {
               <li key={index} className="trash-item" >
                 <span className="span1">{item.title}</span> 
                 <span className="span2">{item.input}</span> 
-                <button onClick={e=>actions.removeFromTrash(item.id)} className="delete-forever"><img className="del-forever" src="./delete1.svg"/></button>
+                <button onClick={e=>actions.removeFromTrash(item.id)} className="delete-forever"><img className="del-forever" src="./del1.png"/></button>
               </li>)}
           </Masonry>
         </ul>
