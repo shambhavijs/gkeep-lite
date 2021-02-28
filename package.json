@@ -11,6 +11,7 @@
     "react-app-rewire-disable-chunks": "0.0.1",
     "react-app-rewired": "4.0.2",
     "react-dom": "^17.0.1",
+    "rewire": "^5.0.0",
     "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
@@ -39,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "rewire": "^5.0.0"
   }
 }
