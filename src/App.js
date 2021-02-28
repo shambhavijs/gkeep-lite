@@ -215,12 +215,8 @@ class App extends React.Component{
               <Link to="/trash" className="nav-trash"><img className="trash" src="./delete.svg"/></Link>
             </div>
             <Switch>
-              <Route exact path="/">
-                <Home state={this.state} styles={styles} {...this.actions}/>
-              </Route>
-              <Route path="/trash">
-                <Trash state={this.state} styles={styles} {...this.actions}/>
-              </Route>
+              <Route exact path="/" render={()=><Home state={this.state} styles={styles} {...this.actions}/>}/>
+              <Route path="/trash" render={()=><Trash state={this.state} styles={styles} {...this.actions}/>}/>
             </Switch>
           </Router>
         </div>
